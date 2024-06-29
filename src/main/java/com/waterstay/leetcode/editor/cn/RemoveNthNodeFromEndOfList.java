@@ -1,7 +1,7 @@
   /**
     19.删除链表的倒数第 N 个结点
   */
-  
+
   package com.waterstay.leetcode.editor.cn;
 
   import com.waterstay.leetcode.editor.cn.datastruct.ListNode;

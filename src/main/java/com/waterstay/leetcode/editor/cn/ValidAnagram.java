@@ -14,22 +14,25 @@ public class ValidAnagram {
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
+
+    /**
+     * 如果输入字符串包含 unicode 字符，直接使用HashMap即可
+     */
     class Solution {
         public boolean isAnagram5(String s, String t) {
             if (s.length() != t.length()) {
                 return false;
             }
             int[] hashTable = new int[128];
-            int count = s.length();
             for (int i = 0; i < s.length(); i++) {
                 hashTable[s.charAt(i)]++;
             }
             for (int i = 0; i < t.length(); i++) {
-                if (hashTable[t.charAt(i)]-- > 0) {
-                    count--;
+                if (--hashTable[t.charAt(i)] < 0) {
+                    return false;
                 }
             }
-            return count == 0;
+            return true;
         }
 
         public boolean isAnagram1(String s, String t) {

@@ -1,7 +1,7 @@
   /**
     904.水果成篮
   */
-  
+
   package com.waterstay.leetcode.editor.cn;
   public class FruitIntoBaskets{
       public static void main(String[] args) {
