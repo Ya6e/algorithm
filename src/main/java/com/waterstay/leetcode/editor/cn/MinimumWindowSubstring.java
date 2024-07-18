@@ -11,6 +11,9 @@ public class MinimumWindowSubstring {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        /**
+         * 滑动窗口
+         */
         public String minWindow(String s, String t) {
             // 使用数组代替哈希表记录子串t中各字符的出现次数（待覆盖的个数）
             int[] cnt = new int[128];
